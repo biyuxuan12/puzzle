@@ -1,0 +1,16 @@
+{
+  "extends": "./node_modules/@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "preserveConstEnums": true,
+    "noEmit": false,
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ]
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
