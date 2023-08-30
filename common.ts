@@ -16,10 +16,11 @@ export function spin90(vector:Direction[]):Direction[]{
     return vector.map(direction=>(direction +1)%4 as Direction)
 }
 
-export function positionAvailable(map: number[][], position: Position) {
+export function positionAvailable(map: number[][], position: Position,sign:number=0) {
 
-    return position.row >= 0 && position.column >= 0 && map.length > position.row && map[position.row].length > position.column && map[position.row][position.column] === 0
+    return position.row >= 0 && position.column >= 0 && map.length > position.row && map[position.row].length > position.column && (map[position.row][position.column] === 0 ||map[position.row][position.column] === sign)
 }
+
 
 export  function setValueToPosition(map: number[][], position: Position,value:number){
     map[position.row][position.column]=value

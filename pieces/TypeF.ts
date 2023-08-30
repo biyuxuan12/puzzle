@@ -3,8 +3,8 @@ import {Direction} from "../common";
 
 const {Left,Right,Up,Down}=Direction;
 
-export class TypeB extends Piece {
+export class TypeF extends Piece {
     constructor() {
-        super([Down, Down, Right,Up],2);
+        super([Up,Right,Up,Up],6);
     }
 }

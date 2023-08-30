@@ -35,7 +35,7 @@ export abstract class Piece{
         for(let index in vector)
         {
             checkPosition =positionMoveBy(checkPosition,vector[index]);
-            if(positionAvailable(newMap,checkPosition))
+            if(positionAvailable(newMap,checkPosition,this.sign))
             {
                 setValueToPosition(newMap,checkPosition,this.sign)
 
