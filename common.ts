@@ -41,5 +41,6 @@ export function positionMoveBy(position:Position,direct:Direction):Position{
 }
 
 export function printMap(map:number[][]){
-    map.forEach(row=> console.log(row.join(' ')));
+    map.forEach(row=>
+        console.log(row.map(element=>element ===-1?'x':element%10 ).join(' ')));
 }

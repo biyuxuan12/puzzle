@@ -28,13 +28,21 @@ const todayMap =today()
 console.log("today")
 
 printMap(todayMap)
+const rowNum = todayMap.length;
+const columnNum = todayMap[0].length;
+console.log("rowNum:"+rowNum);
+console.log("columnNum:"+columnNum);
+
 
 
 addPiece(todayMap,0)
 
 function addPiece(map: number[][], pieceIndex: number) {
-    for (let  x=0;x<map.length;x++) {
-        for (let y=0;y<map[x].length;y++) {
+    for (let  x=0;x<rowNum;x++) {
+        for (let y=0;y<columnNum;y++) {
+            if(pieceIndex===0)
+             console.log("正在以第"+(pieceIndex+1)+"块拼图尝试坐标{"+x+','+y+"}的可能")
+
             piecesList[pieceIndex].tryAddPieceToMap(map,{row: x,column: y})
                 .forEach(result=>{
                     if(pieceIndex==piecesList.length-1){
